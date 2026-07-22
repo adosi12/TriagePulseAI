@@ -47,7 +47,7 @@ JIRA_ENABLED:     bool = bool(JIRA_URL and JIRA_USER and JIRA_API_TOKEN)
 RAG_TOP_K: int = int(os.getenv("RAG_TOP_K", "5"))
 
 # ── Database ──────────────────────────────────────────────────────────────────
-DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/triagepulse")
+DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://db_user:db_password@localhost:5432/triagepulse")
 
 # ── Derived flags ─────────────────────────────────────────────────────────────
 LLM_ENABLED:   bool = bool(GEMINI_API_KEY)

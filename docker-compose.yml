@@ -5,9 +5,9 @@ services:
     image: ankane/pgvector:latest
     container_name: triagepulse_db
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: triagepulse
+      POSTGRES_USER: ${POSTGRES_USER:-db_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-db_password}
+      POSTGRES_DB: ${POSTGRES_DB:-triagepulse}
     ports:
       - "5432:5432"
     volumes:
@@ -24,7 +24,7 @@ services:
     environment:
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - RESEND_API_KEY=${RESEND_API_KEY}
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/triagepulse
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-db_user}:${POSTGRES_PASSWORD:-db_password}@db:5432/${POSTGRES_DB:-triagepulse}
     volumes:
       - ./backend/data:/app/data
     depends_on:
