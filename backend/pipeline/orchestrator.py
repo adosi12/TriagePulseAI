@@ -11,6 +11,7 @@ from config.settings import GEMINI_API_KEY, GEMINI_MODEL, LLM_ENABLED, RAG_TOP_K
 from pipeline.embedder import match_incident
 from pipeline.jira_client import JiraClient
 from pipeline.email_client import send_alert_email
+from pipeline.notification_client import NotificationClient
 from pipeline.cost_calculator import compute_savings
 from google import genai
 from google.genai import types
@@ -167,6 +168,25 @@ def run_pipeline_stream(alert_payload: dict) -> Generator[dict, None, None]:
         "email":      email_result,
     }
 
+    # ── Stage 6: Slack Notification ───────────────────────────────────────────
+    yield {"event": "stage_start", "stage": "slack_notification", "label": "Sending Slack notification..."}
+    t0 = time.time()
+    notifier = NotificationClient()
+    slack_result = notifier.notify(
+        alert=alert_payload,
+        ticket=ticket,
+        root_cause_summary=synthesis["root_cause_summary"],
+        confidence_score=synthesis.get("confidence_score", 0.0),
+        time_saved_minutes=savings["time_saved_minutes"],
+    )
+    yield {
+        "event":      "stage_done",
+        "stage":      "slack_notification",
+        "label":      "Slack notification sent" if slack_result["sent"] and not slack_result["mocked"] else "Slack notification (console only)",
+        "duration_s": round(time.time() - t0, 2),
+        "slack":      slack_result,
+    }
+
     # ── Final result ──────────────────────────────────────────────────────────
     final_res = {
         "event":         "pipeline_complete",
@@ -177,6 +197,7 @@ def run_pipeline_stream(alert_payload: dict) -> Generator[dict, None, None]:
         "ticket":        ticket,
         "savings":       savings,
         "email":         email_result,
+        "slack":         slack_result,
     }
     try:
         from config.database import save_incident_execution
