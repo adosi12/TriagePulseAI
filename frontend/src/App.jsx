@@ -677,6 +677,7 @@ export default function App() {
             {[
               { id: 'logs',    icon: '📜', label: 'Logs' },
               { id: 'metrics', icon: '📊', label: 'Metrics' },
+              { id: 'traces',  icon: '🔀', label: 'Distributed Traces' },
             ].map(item => (
               <button
                 key={item.id}
@@ -694,6 +695,7 @@ export default function App() {
             {[
               { id: 'integration', icon: '⚙️', label: 'Integrations' },
               { id: 'memory',      icon: '🧠', label: 'Incident Memory' },
+              { id: 'kb',          icon: '📚', label: 'Knowledge Base' },
               { id: 'impact',      icon: '📈', label: 'AI Impact' },
               { id: 'about',       icon: 'ℹ️', label: 'About Sentinel AI' },
               { id: 'settings',    icon: '🔧', label: 'Settings' },
@@ -1802,6 +1804,91 @@ export default function App() {
                       ))}
                     </tbody>
                   </table>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* ────────────────────────────────────────────────────────────────
+              VIEW: DISTRIBUTED TRACES
+          ──────────────────────────────────────────────────────────────── */}
+          {activeNav === 'traces' && (
+            <div className="view-screen">
+              <div className="page-header" style={{ marginBottom: 24 }}>
+                <div className="page-title">
+                  🔀 <span>Distributed Traces</span>
+                </div>
+                <div className="page-subtitle">
+                  End-to-end request tracing for <strong>{scenario.trans_id}</strong>
+                </div>
+              </div>
+
+              <div className="card" style={{ padding: '24px' }}>
+                <h3 style={{ marginBottom: '16px' }}>Transaction Waterfall: {scenario.trans_id}</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {scenario.traces && scenario.traces.map((span, idx) => (
+                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <div style={{ width: '160px', fontSize: '13px', fontWeight: '500', color: span.status === 'fail' ? 'var(--red)' : 'var(--text-1)' }}>
+                        {span.service}
+                      </div>
+                      <div style={{ flex: 1, backgroundColor: 'var(--bg-3)', height: '24px', borderRadius: '4px', position: 'relative' }}>
+                        <div style={{ 
+                          width: `${span.pct}%`, 
+                          backgroundColor: span.status === 'fail' ? 'var(--red)' : span.status === 'slow' ? 'var(--yellow)' : 'var(--accent)', 
+                          height: '100%', 
+                          borderRadius: '4px',
+                          minWidth: '4px'
+                        }}></div>
+                      </div>
+                      <div style={{ width: '60px', textAlign: 'right', fontSize: '12px', color: 'var(--text-2)' }}>
+                        {span.duration}ms
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* ────────────────────────────────────────────────────────────────
+              VIEW: KNOWLEDGE BASE
+          ──────────────────────────────────────────────────────────────── */}
+          {activeNav === 'kb' && (
+            <div className="view-screen">
+              <div className="page-header" style={{ marginBottom: 24 }}>
+                <div className="page-title">
+                  📚 <span>Knowledge Base</span>
+                </div>
+                <div className="page-subtitle">
+                  AI-Curated Engineering Runbooks & System Architectures
+                </div>
+              </div>
+
+              <div className="card" style={{ padding: '24px' }}>
+                <h3 style={{ marginBottom: '16px' }}>Search Knowledge Base</h3>
+                <input 
+                  type="text" 
+                  className="form-input" 
+                  placeholder="Search runbooks, postmortems, or architecture docs..." 
+                  style={{ marginBottom: '24px' }}
+                />
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '16px' }}>
+                  <div className="card" style={{ border: '1px solid var(--border)', background: 'var(--bg-1)' }}>
+                    <div style={{ fontWeight: '600', marginBottom: '8px' }}>🚀 Deployments & Rollbacks</div>
+                    <div style={{ fontSize: '13px', color: 'var(--text-2)', marginBottom: '12px' }}>Standard operating procedures for core banking deployments.</div>
+                    <div style={{ fontSize: '12px', color: 'var(--accent)' }}>32 Articles</div>
+                  </div>
+                  <div className="card" style={{ border: '1px solid var(--border)', background: 'var(--bg-1)' }}>
+                    <div style={{ fontWeight: '600', marginBottom: '8px' }}>🔐 Authentication Architecture</div>
+                    <div style={{ fontSize: '13px', color: 'var(--text-2)', marginBottom: '12px' }}>OAuth2 flows, Vault token lifecycle, and JVM memory tuning.</div>
+                    <div style={{ fontSize: '12px', color: 'var(--accent)' }}>14 Articles</div>
+                  </div>
+                  <div className="card" style={{ border: '1px solid var(--border)', background: 'var(--bg-1)' }}>
+                    <div style={{ fontWeight: '600', marginBottom: '8px' }}>⚡ Kafka Data Streams</div>
+                    <div style={{ fontSize: '13px', color: 'var(--text-2)', marginBottom: '12px' }}>Managing consumer groups, lags, and partitioning strategies.</div>
+                    <div style={{ fontSize: '12px', color: 'var(--accent)' }}>18 Articles</div>
+                  </div>
                 </div>
               </div>
             </div>
