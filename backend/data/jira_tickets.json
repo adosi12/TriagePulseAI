@@ -1,0 +1,254 @@
+[
+  {
+    "ticket_id": "TPAI-7848",
+    "url": "https://your-org.atlassian.net/browse/TPAI-7848",
+    "status": "open (mocked)",
+    "created_at": "2026-07-21T16:50:05.332035Z",
+    "affected_service": "Payment-Gateway",
+    "severity": "HIGH",
+    "summary": "[TriagePulseAI] Incident: Payment-Gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "74%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.741 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.684 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.684 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-6935",
+    "url": "https://your-org.atlassian.net/browse/TPAI-6935",
+    "status": "open (mocked)",
+    "created_at": "2026-07-21T16:50:05.773031Z",
+    "affected_service": "Payment-Gateway",
+    "severity": "HIGH",
+    "summary": "[TriagePulseAI] Incident: Payment-Gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "74%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.741 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.684 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.684 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-4079",
+    "url": "https://your-org.atlassian.net/browse/TPAI-4079",
+    "status": "open (mocked)",
+    "created_at": "2026-07-21T17:51:36.349283Z",
+    "affected_service": "payment-gateway-service",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway-service \u2014 java.lang.IllegalArgumentException: Stripe Client ID must no",
+    "root_cause": "[AI error] Best match: Cert renewal automation disabled by infrastructure-as-code config drift.",
+    "suggested_fix": "Re-enabled cert renewal automation in Terraform; triggered an immediate renewal cycle; updated drift-detection policy to flag disabled renewal.",
+    "confidence": "48%",
+    "matched_incidents": [
+      "  [INC-CERT-1008] score=0.482 | Cert renewal automation disabled by infrastructure-as-code config drift.",
+      "  [INC-CERT-1015] score=0.468 | Expired HSM client certificate caused all signing requests to be rejected.",
+      "  [INC-CERT-1006] score=0.445 | Expired HSM client certificate caused all signing requests to be rejected."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-5606",
+    "url": "https://your-org.atlassian.net/browse/TPAI-5606",
+    "status": "open (mocked)",
+    "created_at": "2026-07-21T18:07:38.161962Z",
+    "affected_service": "payment-gateway-service",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway-service \u2014 java.lang.IllegalArgumentException: Stripe Client ID must no",
+    "root_cause": "[AI error] Best match: Cert renewal automation disabled by infrastructure-as-code config drift.",
+    "suggested_fix": "Re-enabled cert renewal automation in Terraform; triggered an immediate renewal cycle; updated drift-detection policy to flag disabled renewal.",
+    "confidence": "48%",
+    "matched_incidents": [
+      "  [INC-CERT-1008] score=0.482 | Cert renewal automation disabled by infrastructure-as-code config drift.",
+      "  [INC-CERT-1015] score=0.468 | Expired HSM client certificate caused all signing requests to be rejected.",
+      "  [INC-CERT-1006] score=0.445 | Expired HSM client certificate caused all signing requests to be rejected."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-6838",
+    "url": "https://your-org.atlassian.net/browse/TPAI-6838",
+    "status": "open (mocked)",
+    "created_at": "2026-07-21T20:01:03.389909Z",
+    "affected_service": "Payment-Gateway",
+    "severity": "HIGH",
+    "summary": "[TriagePulseAI] Incident: Payment-Gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "74%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.741 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.684 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.684 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-8464",
+    "url": "https://your-org.atlassian.net/browse/TPAI-8464",
+    "status": "open (mocked)",
+    "created_at": "2026-07-21T20:20:53.239379Z",
+    "affected_service": "payment-gateway",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "67%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.666 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-6531",
+    "url": "https://your-org.atlassian.net/browse/TPAI-6531",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T02:28:01.175402Z",
+    "affected_service": "payment-gateway",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "67%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.666 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-3457",
+    "url": "https://your-org.atlassian.net/browse/TPAI-3457",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T02:28:24.529903Z",
+    "affected_service": "payment-gateway",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "67%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.666 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-2190",
+    "url": "https://your-org.atlassian.net/browse/TPAI-2190",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T02:33:56.666707Z",
+    "affected_service": "core-banking-auth",
+    "severity": "HIGH",
+    "summary": "[TriagePulseAI] Incident: core-banking-auth \u2014 java.lang.OutOfMemoryError: Metaspace pool exhausted during ",
+    "root_cause": "[AI error] Best match: Hibernate 6 proxy strategy caused StackOverflow on circular @ManyToMany mapping.",
+    "suggested_fix": "Fixed @ManyToMany mapping to use join table; added Hibernate version gate to upgrade process.",
+    "confidence": "43%",
+    "matched_incidents": [
+      "  [INC-LIB-3007] score=0.425 | Hibernate 6 proxy strategy caused StackOverflow on circular @ManyToMany mapping.",
+      "  [INC-LIB-3025] score=0.424 | Hibernate 6 proxy strategy caused StackOverflow on circular @ManyToMany mapping.",
+      "  [INC-LIB-3016] score=0.420 | Hibernate 6 proxy strategy caused StackOverflow on circular @ManyToMany mapping."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-5483",
+    "url": "https://your-org.atlassian.net/browse/TPAI-5483",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T02:39:42.362582Z",
+    "affected_service": "payment-gateway",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "67%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.666 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-2267",
+    "url": "https://your-org.atlassian.net/browse/TPAI-2267",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T03:08:17.349853Z",
+    "affected_service": "payment-gateway",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "67%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.666 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-9193",
+    "url": "https://your-org.atlassian.net/browse/TPAI-9193",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T03:10:23.165516Z",
+    "affected_service": "fraud-event-stream",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: fraud-event-stream \u2014 ConsumerGroupRebalanceError: maximum poll interval exceeded ",
+    "root_cause": "[AI error] Best match: Compaction + schema-registry jobs ran concurrently causing CPU saturation.",
+    "suggested_fix": "Separated compaction and schema-sync cron jobs; added CPU-based backoff.",
+    "confidence": "73%",
+    "matched_incidents": [
+      "  [INC-MQ-2014] score=0.728 | Compaction + schema-registry jobs ran concurrently causing CPU saturation.",
+      "  [INC-MQ-2010] score=0.716 | Misconfigured consumer group caused infinite rebalance loop.",
+      "  [INC-MQ-2001] score=0.711 | Misconfigured consumer group caused infinite rebalance loop."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-5389",
+    "url": "https://your-org.atlassian.net/browse/TPAI-5389",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T03:13:06.794865Z",
+    "affected_service": "payment-gateway",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "67%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.666 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  },
+  {
+    "ticket_id": "TPAI-5254",
+    "url": "https://your-org.atlassian.net/browse/TPAI-5254",
+    "status": "open (mocked)",
+    "created_at": "2026-07-22T07:55:10.839903Z",
+    "affected_service": "payment-gateway",
+    "severity": "CRITICAL",
+    "summary": "[TriagePulseAI] Incident: payment-gateway \u2014 java.lang.NoSuchMethodError: com.fasterxml.jackson.databind.",
+    "root_cause": "[AI error] Best match: Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+    "suggested_fix": "Pinned jackson-databind to 2.15 in prod base image; added dependency matrix tests.",
+    "confidence": "67%",
+    "matched_incidents": [
+      "  [INC-LIB-3009] score=0.666 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3000] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15.",
+      "  [INC-LIB-3018] score=0.590 | Prod ran jackson-databind 2.13 but new build required 2.15; UAT had 2.15."
+    ],
+    "mocked": true
+  }
+]

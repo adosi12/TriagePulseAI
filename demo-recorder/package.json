@@ -1,0 +1,13 @@
+{
+  "name": "sentinel-ai-demo-recorder",
+  "version": "1.0.0",
+  "description": "Playwright video recorder for Sentinel AI dashboard walkthrough",
+  "type": "module",
+  "scripts": {
+    "record": "node record-demo.mjs",
+    "install-browsers": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.61.1"
+  }
+}

@@ -1,0 +1,44 @@
+# ─── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Virtual environments ───────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ─── Environment / Secrets — NEVER commit .env ─────────────────────────
+.env
+# .env.example is safe to commit (it has placeholders, not real secrets)
+
+# ─── FAISS index (large binary, rebuild from source) ───────────────────
+data/faiss_index/
+
+# ─── IDE ────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+
+# ─── OS ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Node / Frontend ────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# ─── Logs ───────────────────────────────────────────────────────────────
+*.log
